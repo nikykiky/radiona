@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     #prijava{
+            width: 400px;
+            background-color: rgb(239, 244, 245);
+            padding: 20px;
+            border: 5px solid #ec7a08;
+            border-radius: 3px;
+        }
+        h2{
+            font-size: 20px;
+            color: rgb(11, 115, 119);
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        span{ 
+            font-size: 16px;
+            margin-bottom: 3px;
+            display: inline-block;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: rgb(22, 99, 106);
+        }
+        .okvir{
+            margin-bottom: 20px;
+        }
+        label{
+            cursor: pointer;
+        }
+        label[for="jumbo"],
+        label[for="velika"],
+        label[for="mala"],
+        label[for="kecap"],
+        label[for="jaja"],
+        label[for="masline"],
+        label[for="paprike"],
+        label[for="gljive"]
+        {
+            color: rgb(102, 101, 53);
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            margin-right: 5px;
+            font-size: 13px;
+            vertical-align: middle;
+            margin-top: -5px;
+            display: inline-block;
+        }
+        input[type="text"],
+        input[type="password"]{
+            width: 300px;
+            padding: 10px;
+            border-radius: 3px;
+            border: 1px solid #aaa;
+            display: inline-block;
+            background-color: rgb(242, 244, 247);
+        }
+        select{
+            width: 320px;
+            padding: 10px;
+            border: 1px solid #aaa;
+            background-color: rgb(242, 244, 247);
+            color: #8b8b8b;
+        }
+        input[type="text"]:hover,
+        input[type="password"]:hover,
+        select:hover{
+            border: 1px solid #6f6f6f;
+        }
+        .novo{}
+        option{
+            color: #a4690a;
+            font-size: 16px;
+            font-color: blue
+           
+        }
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        textarea:focus
+        {
+        }
+        button[type="submit"]{
+            background-color: rgb(22, 99, 106);
+            border: none;
+            color: aliceblue;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        button[type="submit"]:hover{
+            background-color: rgb(14, 61, 66);
+        }
+       
+</style>
+<body>
+
+    <form id="prijava" action="" method="get">
+    
+        <h2>Naručite pizzu</h2>
+        <span><label for="ime">Ime i prezime:</label></span>
+        <div class="okvir">
+            <input type="text" name="ime_prezime" placeholder="Vaše ime i prezime" required autocomplete="on" tabindex="10" id="ime">
+        </div>
+        <span><label for="adresa">Adresa</label></span>
+        <div class="okvir">
+            <input type="text" name="adresa" placeholder="Vaša adresa" required autocomplete="on" tabindex="20" id="adresa">
+        </div>
+        <span><label for="pizza">Koju pizzu želite</label></span>
+        <div class="okvir">
+            <select name="pizza" id=“pizza“>     
+                <option value="manje20" selected="selected">Mješana </option>
+                <option value="18do29">Plodovi mora</option>
+                <option value="30do39">Margarita </option>
+                <option value="40do49">Calzone </option>
+                <option value="50do59">Pizza s rajčicama i bosiljkom</option>
+                <option value="60do69">Pizza sa skutom i tartufima</option>
+                <option value="60do69">Pizza s inćunima i mozzarellom</option>
+                <option value="70do79">Pizza sa šunkom</option>
+                <option value="80do89">Slavonska pizza</option>
+                 </select>
+        </div>
+        <span>Veličina:</span>
+        <div class="okvir">
+            <input type="radio" name="velicina" value="jumbo"  id="jumbo">
+            <label for="jumbo">Jumbo</label>
+            <input type="radio" name="velicina" value="velika" checked id="velika">
+            <label for="velika">Velika</label>
+            <input type="radio" name="velicina" value="mala" id="mala">
+            <label for="mala">Mala</label>
+        </div>
+
+        <span>Dodaci za pizzu</span>
+        <div class="okvir">
+            <input type="checkbox" name="operativni" value="windows" id="windows" checked>
+            <label for="kecap">Kečap</label>
+            <input type="checkbox" name="operativni" value="linux" id="linux">
+            <label for="jaja">Jaja</label>
+            <input type="checkbox" name="operativni" value="OS" id="OS">
+            <label for="masline">Masline</label>
+            <input type="checkbox" name="operativni" value="OS" id="OS">
+            <label for="paprike">Paprike</label>
+            <input type="checkbox" name="operativni" value="OS" id="OS">
+            <label for="gljive">Gljive</label>
+        </div>
+        <div class="okvir">
+            <button type="submit" id="submit">Pošalji</button>
+        </div>
+    
+    </form>
+</body>
+</html>
